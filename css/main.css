@@ -150,7 +150,7 @@ main {
 .b3 {  grid-area:b3;}
 .b4 {  grid-area:b4;}
 .b5 {  grid-area:b5;}
-.b6 {  grid-area:b6; overflow:unset;}
+.b6.cell {  grid-area:b6; overflow:unset;}
 .b7.cell {  grid-area:b7; overflow:unset;}
 
 .cell {
@@ -231,40 +231,67 @@ main {
 }
 
 
-.cell-small-triangle {
+.cell.cell-small-triangle {
     z-index:0;
+    transform:rotate(90deg) scale(.25);
 }
 
 .cell-small-triangle .cell-content {
     position:relative;
-    width:0;
-    height:0;
-    
-    border-right: 10vw solid #fff;
-    border-bottom:10vw solid transparent;
- 
+    width:100%;
+    height:100%;
+    overflow: hidden;
     background-position:bottom left;
     background-image:url(https://picsum.photos/300/300?random=6);
     transform:rotate(-45deg) translate(50%, -50%);
 }
 
+
+.cell-small-triangle .shape {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    transform: rotate(45deg) translate(-46%, 0%) ;
+    transform-origin: bottom right;
+}
+
+.cell-small-triangle {
+  //  background-image:url(https://picsum.photos/300/300?random=6);
+    
+}
 .cell-big-triangle {
     z-index:0;
+    transform: rotate(90deg) scale(.75) translate( 0%, 140%);
 }
+
 
 .cell-big-triangle .cell-content {
     position:relative;
-    width:0;
-    height:0;
-    
-    border-top: 20vw solid #fff;
-    border-right:20vw solid transparent;
- 
+    width:100%;
+    height:100%;
     background-position:bottom left;
-    background-image:url(https://picsum.photos/300/300?random=6);
+    background-image:url(https://picsum.photos/300/300?random=8);
     transform:rotate(-45deg) translate(50%, -50%);
+    overflow:hidden;
+    color:#fff;
 }
 
+
+.cell-big-triangle .shape {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    transform: rotate(-45deg) translate(-53%, -53%);
+    transform-origin: top left;
+    outline:solid 1px red;
+    shape-outside:circle();
+}
 
 
 
