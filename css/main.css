@@ -1,67 +1,67 @@
 /*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+* What follows is the result of much research on cross-browser styling.
+* Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+* Kroc Camen, and the H5BP dev community and team.
+*/
 
 @font-face {
-    font-family:Ostrich;
-    src: url("/css/OstrichSans-Heavy.otf");
+  font-family:Ostrich;
+  src: url("/css/OstrichSans-Heavy.otf");
 }
 @font-face {
-    font-family:Bagnard;
-    src: url("/css/Bagnard.otf");
+  font-family:Bagnard;
+  src: url("/css/Bagnard.otf");
 }
 /* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+Base styles: opinionated defaults
+========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
 }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* Vendor-prefixed and regular ::selection selectors cannot be combined:
+* https://stackoverflow.com/a/16982510/7133471
+*
+* Customize the background color to match your design.
+*/
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 /*
- * A better looking default horizontal rule
- */
+* A better looking default horizontal rule
+*/
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+* Remove the gap between audio, canvas, iframes,
+* images, videos and the bottom of their containers:
+* https://github.com/h5bp/html5-boilerplate/issues/440
+*/
 
 audio,
 canvas,
@@ -69,48 +69,48 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*
- * Remove default fieldset styles.
- */
+* Remove default fieldset styles.
+*/
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*
- * Allow only vertical resizing of textareas.
- */
+* Allow only vertical resizing of textareas.
+*/
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+Browser Upgrade Prompt
+========================================================================== */
 
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+Author's custom styles
+========================================================================== */
 
 
 
 /* grid is magic! */
 body {
-    overflow-x: hidden;
-    font-family:Ostrich;
+  overflow-x: hidden;
+  font-family:Ostrich;
 }
 * {
   padding:0;
@@ -119,8 +119,9 @@ body {
   box-sizing:border-box;
 }
 .container {
-  max-width:1200px;
-  margin:auto;
+  //max-width:2000px;
+  width:130vw;
+    margin:auto;
   height:100vh;
 }
 .holder {
@@ -128,6 +129,7 @@ body {
   padding-bottom:100%;
   height:0;
   position:relative;
+  transform: translate(-20%, -1%)
 }
 main {
   position:absolute;
@@ -161,7 +163,7 @@ main {
   transform:rotate(90deg);
   overflow:hidden;
   z-index:1;
-  
+
 }
 .cell .cell-inner {
   width:100%;
@@ -174,6 +176,7 @@ main {
   margin: auto;
   display:block;
 }
+
 .logo {
   grid-area:logo;
   text-align:right;
@@ -182,13 +185,22 @@ main {
   font-size: calc(1.5em + 3vw);
   line-height: .8;
 }
+
 .subheader {
   grid-area:subheader;
+  font-family: Bagnard;
+  transform-origin: left right;
+  transform: rotate(0deg) translate(0, 100%);
+  font-size:1.5em;
+  margin-top:-2em;
+  padding-right:1em;
+  text-align: right;
 }
+
 .cell .cell-inner {
   position:relative;
-  
 }
+
 .cell .cell-inner:before {
   content:"";
   position:absolute;
@@ -202,273 +214,302 @@ main {
   background-size:cover;
 }
 
-
-
 .b1 .cell-inner:before {
-  background-image:url(https://picsum.photos/200/200?random=1);
+  background-image:url(https://picsum.photos/600/600?random=1);
 }
 
 .b2 .cell-inner:before {
-  background-image:url(https://picsum.photos/200/200?random=2);
+  background-image:url(https://picsum.photos/600/600?random=2);
 }
 
 .b3 .cell-inner:before {
-  background-image:url(https://picsum.photos/200/200?random=3);
+  background-image:url(https://picsum.photos/600/600?random=3);
 }
 
 .b4 .cell-inner:before {
-  background-image:url(https://picsum.photos/200/200?random=4);
+  background-image:url(https://picsum.photos/600/600?random=4);
 }
 
-.b5 .cell-inner:before {
-  //background-image:url(https://picsum.photos/200/200?random=5);
-}
-.b6 .cell-inner:before {
- // background-image:url(https://picsum.photos/200/200?random=6);
-}
-.b7 .cell-inner:before {
- // background-image:url(https://picsum.photos/200/200?random=6);
+.cell.cell-triangle--small {
+  z-index:0;
+  transform:rotate(90deg) scale(.25);
 }
 
-
-.cell.cell-small-triangle {
-    z-index:0;
-    transform:rotate(90deg) scale(.25);
+.cell-triangle--small .cell-content {
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  background-position:bottom left;
+  transform:rotate(-45deg) translate(50%, -50%);
+  background-image:url(https://picsum.photos/600/600?random=6);
 }
 
-.cell-small-triangle .cell-content {
-    position:relative;
-    width:100%;
-    height:100%;
-    overflow: hidden;
-    background-position:bottom left;
-    background-image:url(https://picsum.photos/300/300?random=6);
-    transform:rotate(-45deg) translate(50%, -50%);
+.cell-triangle--big {
+  z-index:0;
+  overflow: hidden;
+  transform: rotate(90deg) scale(.75) translate( 0%, 140%);
 }
 
-
-.cell-small-triangle .shape {
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150%;
-    height: 150%;
-    transform: rotate(45deg) translate(-46%, 0%) ;
-    transform-origin: bottom right;
+.cell-triangle--big .cell-content {
+  position:relative;
+  width:100%;
+  transform:rotate(-45deg) translate(50%, -50%);
+  overflow:hidden;
+  color:#fff;
+  font-size:calc(.3em + 2vw);
+  font-family: Bagnard;
+  word-break: break-all;
+  letter-spacing: -2px;
 }
 
-.cell-small-triangle {
-  //  background-image:url(https://picsum.photos/300/300?random=6);
-    
-}
-.cell-big-triangle {
-    z-index:0;
-    transform: rotate(90deg) scale(.75) translate( 0%, 140%);
+.cell-triangle--big p {
+  padding-top: 4em;
+  padding-right:.3em;
+  padding-left:.3em;
 }
 
+.cell-triangle .filter:before {
+  content:'';
+  width:100%;
+  height:100%;
+  display: block;
+  background-position:bottom left;
+  position: absolute;
+  z-index:-1;
 
-.cell-big-triangle .cell-content {
-    position:relative;
-    width:100%;
-    height:100%;
-    background-position:bottom left;
-    background-image:url(https://picsum.photos/300/300?random=8);
-    transform:rotate(-45deg) translate(50%, -50%);
-    overflow:hidden;
-    color:#fff;
+}
+.cell-triangle--big .filter:before {
+    background-image:url(https://picsum.photos/600/600?random=7);
+}
+.cell-triangle--small .filter:before {
+    background-image:url(https://picsum.photos/600/600?random=9);
+}
+.cell-triangle--big .shape {
+  background-color: #fff;
+  float:left;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: rotate(-45deg) translate(-50%, -65%);
+  transform-origin: top left;
 }
 
-
-.cell-big-triangle .shape {
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150%;
-    height: 150%;
-    transform: rotate(-45deg) translate(-53%, -53%);
-    transform-origin: top left;
-    outline:solid 1px red;
-    shape-outside:circle();
+.cell-triangle .shape-outside {
+  float:left;
+  width:100%;
+  height: 100%;
+  transform: scale(1.01);
 }
 
+.cell-triangle--big .shape-outside {
+  shape-outside: polygon(100% 0, 0% 100%, 0% 0%);
+}
+.cell-triangle--small .shape-outside {
+  shape-outside: polygon(100% 0, 0% 100%, 0% 0%);
+}
 
+.cell a:link {
+  text-decoration: none;
+  text-shadow:1px 1px 1px #000;
 
+}
 
+.cell a:link .cell-content {
+  font-size: calc(100% + 5vw);
+  color:#fff;
+  text-decoration: none;
+} 
 
+.cell a:hover .cell-content {
+  transform: scale(1.5);
+  text-shadow:1px 1px 1px #000;
+} 
+
+.cell a:visited .cell-content  {
+  color:#5d41c3;
+  text-shadow:1px 1px 1px #fff;
+} 
+.cell a:hover .cell-inner:before {
+  filter:grayscale(1) sepia(1) hue-rotate(220deg) saturate(1.5) brightness(1.1) contrast(1.9);
+}
+
+.filter:before, .cell .cell-inner:before {
+  filter:grayscale(.5) sepia(1) hue-rotate(220deg) saturate(5) brightness(1.4) blur(4px);
+}
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+Helper classes
+========================================================================== */
 
 /*
- * Hide visually and from screen readers
- */
+* Hide visually and from screen readers
+*/
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
 }
 
 /*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
 }
 
 /*
- * Hide visually and from screen readers, but maintain layout
- */
+* Hide visually and from screen readers, but maintain layout
+*/
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+EXAMPLE Media Queries for Responsive Design.
+These examples override the primary ('mobile first') styles.
+Modify as content requires.
+========================================================================== */
 
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+  /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+Print styles.
+Inlined to avoid the additional HTTP request:
+https://www.phpied.com/delay-loading-your-print-css/
+========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster */
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+  /*
+  * Don't show links that are fragment identifiers,
+  * or use the `javascript:` pseudo protocol
+  */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
 
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+  /*
+  * Printing Tables:
+  * http://css-discuss.incutio.com/wiki/Printing_Tables
+  */
 
-    thead {
-        display: table-header-group;
-    }
+  thead {
+    display: table-header-group;
+  }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
 
 
